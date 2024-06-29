@@ -1,0 +1,35 @@
+{
+  "table_name": "GrievanceNotification",
+  "columns": [
+    {
+      "name": "id",
+      "type": "VARCHAR(255)",
+      "constraints": "PRIMARY KEY"
+    },
+    {
+      "name": "user_id",
+      "type": "VARCHAR(255)",
+      "constraints": "NOT NULL, FOREIGN KEY (user_id) REFERENCES User(id)"
+    },
+    {
+      "name": "grievance_id",
+      "type": "VARCHAR(255)",
+      "constraints": "NOT NULL, FOREIGN KEY (grievance_id) REFERENCES Grievance(id)"
+    },
+    {
+      "name": "message",
+      "type": "TEXT",
+      "constraints": "NOT NULL"
+    },
+    {
+      "name": "seen",
+      "type": "BOOLEAN",
+      "constraints": "NOT NULL"
+    },
+    {
+      "name": "created_at",
+      "type": "TIMESTAMP",
+      "constraints": "NOT NULL"
+    }
+  ]
+}

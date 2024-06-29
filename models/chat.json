@@ -1,0 +1,36 @@
+{
+    "table_name": "Chat",
+    "columns": [
+      {
+        "name": "id",
+        "type": "VARCHAR(255)",
+        "constraints": "PRIMARY KEY"
+      },
+      {
+        "name": "sender_id",
+        "type": "VARCHAR(255)",
+        "constraints": "NOT NULL, FOREIGN KEY (to) REFERENCES User(id)"
+      },
+      {
+        "name": "reciever_id",
+        "type": "VARCHAR(255)",
+        "constraints": "NOT NULL, FOREIGN KEY (receive_id) REFERENCES User(id)"
+      },
+      {
+        "name": "message",
+        "type": "TEXT",
+        "constraints": "NOT NULL"
+      },
+      {
+        "name": "attach",
+        "type": "BOOLEAN",
+        "constraints": ""
+      },
+      {
+        "name": "attach_path",
+        "type": "VARCHAR(255)",
+        "constraints": ""
+      }
+    ]
+  }
+  

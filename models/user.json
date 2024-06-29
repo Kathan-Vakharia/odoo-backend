@@ -1,0 +1,30 @@
+{
+  "table_name": "User",
+  "columns": [
+    {
+        "name": "id",
+        "type": "VARCHAR(255)",
+        "constraints": "PRIMARY KEY"
+      },
+    {
+      "name": "name",
+      "type": "VARCHAR(255)",
+      "constraints": "NOT NULL"
+    },
+    {
+      "name": "email",
+      "type": "VARCHAR(255)",
+      "constraints": "NOT NULL"
+    },
+    {
+      "name": "dept_id",
+      "type": "VARCHAR(255)",
+      "constraints": "NOT NULL, FOREIGN KEY (dept_id) REFERENCES Department(id)"
+    },
+    {
+      "name": "role",
+      "type": "ENUM('employee', 'admin', 'HR')",
+      "constraints": "NOT NULL"
+    }
+  ]
+}

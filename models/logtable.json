@@ -1,0 +1,30 @@
+{
+  "table_name": "Log",
+  "columns": [
+    {
+      "name": "id",
+      "type": "VARCHAR(255)",
+      "constraints": "PRIMARY KEY"
+    },
+    {
+      "name": "module",
+      "type": "ENUM('grievance', 'chat', 'user')",
+      "constraints": "NOT NULL"
+    },
+    {
+      "name": "action",
+      "type": "ENUM('login', 'create', 'update', 'delete')",
+      "constraints": "NOT NULL"
+    },
+    {
+      "name": "created_at",
+      "type": "TIMESTAMP",
+      "constraints": "NOT NULL"
+    },
+    {
+      "name": "msg",
+      "type": "TEXT",
+      "constraints": "NOT NULL"
+    }
+  ]
+}

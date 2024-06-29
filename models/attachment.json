@@ -1,0 +1,25 @@
+{
+  "table_name": "Attachment",
+  "columns": [
+    {
+      "name": "id",
+      "type": "VARCHAR(255)",
+      "constraints": "PRIMARY KEY"
+    },
+    {
+      "name": "url",
+      "type": "VARCHAR(255)",
+      "constraints": "NOT NULL"
+    },
+    {
+      "name": "grievance_id",
+      "type": "VARCHAR(255)",
+      "constraints": "NOT NULL, FOREIGN KEY (grievance_id) REFERENCES Grievance(id)"
+    },
+    {
+      "name": "mime_type",
+      "type": "VARCHAR(255)",
+      "constraints": "NOT NULL"
+    }
+  ]
+}
