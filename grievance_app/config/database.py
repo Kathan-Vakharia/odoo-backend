@@ -8,6 +8,8 @@ db_database = os.getenv('DB_DATABASE')
 db_user = os.getenv('DB_USER')
 db_password = os.getenv('DB_PASSWORD')
 
+print(db_host, db_database, db_user, db_password)
+
 
 def create_db_conn():
     try:
@@ -32,6 +34,3 @@ def close_conn(conn):
     if conn.is_connected():
         conn.close()
         print("MySQL connection is closed")
-
-
-create_db_conn()
